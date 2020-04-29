@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- start banner Area -->
+			<section class="relative about-banner" id="home">
+				<div class="overlay overlay-bg"></div>
+
+				<div class="container">
+
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Zaloguj się!
+							</h1>
+							<p class="text-white link-nav"> <a href="{% url 'home' %}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url 'signup' %}"> Logowanie</a></p>
+
+						</div>
+                     </div>
+				</div>
+			</section>
+			<!-- End banner Area -->
+
+
+   <div class="form-group sample-text-area section-gap">
+{#   <div class="overlay overlay-bg"></div>#}
+        <div class="container">
+           <div class="row d-flex justify-content-center">
+               <div class="col-lg-8 col-md-8">
+
+                        {% if error %}
+                           <h2 class="genric-btn danger large mb-25" > {{ error }} </h2>
+
+                        {% endif %}
+                        <form action="{% url 'login' %}" method="POST">
+                            {% csrf_token %}
+                            <h3 class="mb-30">Podaj login i hasło</h3>
+                            <div class="w-50">
+                                <div class="mt-10">
+                                    <input type="text" name="user" placeholder="Użytkownik" onfocus="this.placeholder = 'podaj nazwę użytkownika'" onblur="this.placeholder = 'Użytkownik'" required class="single-input">
+                                </div>
+                                <div class="mt-10 ">
+                                    <input type="password" name="password" placeholder="Podaj hasło" onfocus="this.placeholder = 'podaj hasło'" onblur="this.placeholder = 'Hasło'" required class="single-input">
+                                </div>
+                                <div class="button-group-area mt-10 text-right">
+                                   <input class="genric-btn primary-border" type="submit" value="Zaloguj" >
+                                </div>
+                            </div>
+
+                        </form>
+                </div>
+           </div>
+        </div>
+   </div>
+{% endblock %}
