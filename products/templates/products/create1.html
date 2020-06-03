@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <!-- start banner Area -->
+    <section class="relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+
+        <div class="container">
+
+            <div class="row d-flex align-items-center  justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Dodaj
+                    </h1>
+                    <p class="text-white link-nav"> <a href="{% url 'home' %}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url 'create-flight' %}"> Dodaj </a></p>
+
+                </div>
+             </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <div class="section-gap">
+        <div class="container">
+           <div class="row d-flex justify-content-center">
+               <div class="col-lg-8 col-md-8">
+
+                        {% if error %}
+                           <h2 class="genric-btn danger flarge mb-25" > {{ error }} </h2>
+                        {% endif %}
+
+                        <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            <h3 class="mb-30">Dodaj zdobycz:</h3>
+                            <div class="w-50 float-left col">
+                                <label for="id_image_load"  onMouseOver="this.style.backgroundColor='#f44a40' " onMouseOut="this.style.backgroundColor='#ffffff'" class="genric-btn danger-border e-large w-100" style="cursor: pointer;">Dodaj zdjęcie</label>
+                                {{ forms }}
+
+                                <div class="button-group-area mt-10 text-right">
+                                    <input class="genric-btn primary-border" type="submit" value="Zapisz" >
+                                </div>
+
+                                <div class="mt-10">
+                                    <input type="text" name="user" placeholder="Użytkownik" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Użytkownik'" required class="single-input">
+                                </div>
+                                <div class="mt-10 ">
+                                    <input type="password" name="password" placeholder="Podaj hasło" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hasło'" required class="single-input">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="password" name="password-confirm" placeholder="Potwierdź hasło" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Potwierdź hasło'" required class="single-input">
+                                </div>
+                                <div class="button-group-area mt-10 text-right">
+                                   <input class="genric-btn primary-border" type="submit" value="Zarejestruj" >
+                                </div>
+                            </div>
+
+                        </form>
+
+               <div class="col-lg-4 float-lg-right">
+							<div class="single-destinations">
+								<div class="thumb">
+									<img src="../static/img/packages/d2.jpg" alt="">
+								</div>
+								<div class="details">
+									<h4>Holiday Sea beach Blue Ocean</h4>
+									<p>
+										United staes of America
+									</p>
+									<ul class="package-list">
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Duration</span>
+											<span>06 days and 7 nights</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Date</span>
+											<span>18.04.2018</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Airport</span>
+											<span>Changi</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Extras</span>
+											<span>All Inclusive</span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Price per person</span>
+											<a href="#" class="price-btn">$250</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+                </div>
+
+           </div>
+        </div>
+   </div>
+   <script src="{% static 'products/app.js' %}"></script>
+{% endblock %}

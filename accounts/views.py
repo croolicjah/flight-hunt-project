@@ -22,16 +22,13 @@ class SignUp(View):
         else:
             return render(request, 'accounts/signup.html', {'error': 'Nieudane potwierdzenie hasła!!!'})
 
-        # form = self.form_class(request.POST)
-        # if form.is_valid():
-        #     # <process form cleaned data>
-        #     return HttpResponseRedirect('/success/')
 
 class Login(View):
     def get(self, request):
         #  <view logic>
 
         return render(request, 'accounts/login.html')
+
 
     def post(self, request, *args, **kwargs):
         user = auth.authenticate(username=request.POST['user'], password=request.POST['password'])
@@ -40,6 +37,8 @@ class Login(View):
             return redirect('home')
         else:
             return render(request, 'accounts/login.html', {'error': 'Login lub hasło są niepoprawne!!!'})
+
+
 class Logout(View):
     def post(self, request, *args, **kwargs):
         auth.logout(request)

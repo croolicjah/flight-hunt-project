@@ -370,3 +370,5 @@ travel/
 fly4u/templates/fly4u/homOld.html
 
 products/migrations/0001_initial.py
+templates/
+

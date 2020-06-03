@@ -1,4 +1,4 @@
 from django.contrib import admin
-
+from .models import Flight
 # Register your models here.
-admin.site.re
+admin.site.register(Flight)
