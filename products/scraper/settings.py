@@ -14,16 +14,17 @@ import os
 import django
 # ------------ DJANGO SETTINGS ------------
 sys.path.append(os.path.dirname(os.path.abspath('.')))
+# PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'product_hunt.settings'
 django.setup()  # for > django 1.7
 
 
-BOT_NAME = 'travel_scrap'
+BOT_NAME = 'products'
 
-SPIDER_MODULES = ['travel_scrap.spiders']
-NEWSPIDER_MODULE = 'travel_scrap.spiders'
+SPIDER_MODULES = ['products.scraper.spiders']
+NEWSPIDER_MODULE = 'products.scraper.spiders'
 
-SPLASH_URL = 'http://localhost:8050/'
+SPLASH_URL = 'http://127.0.0.1:8050/'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'travel_scrap (+http://www.yourdomain.com)'
 
@@ -56,14 +57,14 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-    'travel_scrap.middlewares.TravelScrapSpiderMiddleware': 543,
+    # 'products.scraper.middlewares.TravelScrapSpiderMiddleware': 543,
     'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
 }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'travel_scrap.middlewares.TravelScrapDownloaderMiddleware': 543,
+    # 'products.scraper.middlewares.TravelScrapDownloaderMiddleware': 543,
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
@@ -77,9 +78,11 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'travel_scrap.pipelines.TravelScrapPipeline': 300,
-#}
+# ITEM_PIPELINES = {
+#    # 'products.pipelines.TravelScrapPipeline': 300,
+#    'products.scraper.pipelines.DjangoWriterPipeline': 800 ,
+# }
+
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

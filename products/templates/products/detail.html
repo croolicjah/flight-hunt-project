@@ -1,10 +1,368 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- start banner Area -->
+    <section class="about-banner relative">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Hunt
+                    </h1>
+                    <p class="text-white link-nav"><a href="{% url 'home' %}">Home </a> <span
+                            class="lnr lnr-arrow-right"></span> <a href="#"> Hunt nr </a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start create Area -->
+    <section class="section-bg ">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row post-content-area single-post-area">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="feature-img">
+                                <img class="img-fluid" src="{% static 'img/blog/feature-img1.jpg' %}" alt="img">
+                            </div>
+                            <hr>
+
+                            <div class="bg-light mb-lg-auto mb-md-auto ">
+                                <div class="d-flex mt-3 justify-content-between">
+                                    <ul id="myTab" class="nav nav-tabs mb-xl-auto ">
+                                        <li class="nav-item">
+                                            <a class="hunt-tabs nav-link active" data-toggle="tab" href="#overview">Szczegóły</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="hunt-tabs nav-link" data-toggle="tab" href="#faqs">FAQs</a>
+                                        </li>
+                                    </ul>
+
+
+                                    <div class="mt-15">
+                                        <button class="btn btn-sm btn-outline-success ">
+                                            15&nbsp;<span class="oi oi-caret-top fa-lg font-weight-bold"> </span>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger">
+                                           5&nbsp;<span class="oi oi-caret-bottom fa-lg  font-weight-bold"> </span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content border-left flex-lg-row">
+                                    <div class="tab-pane fade active show" id="overview">
+                                        <div class="single-post row col-lg-12 mb-4 pb-3">
+                                            <div class="col-lg-3 col-md-3 meta-details">
+                                                <div class="user-details row">
+                                                    <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark
+                                                        wiens</a> <span class="lnr lnr-user"></span></p>
+                                                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec,
+                                                        2017</a> <span class="lnr lnr-calendar-full"></span></p>
+                                                    <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a>
+                                                        <span class="lnr lnr-eye"></span></p>
+                                                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06
+                                                        Comments</a> <span class="lnr lnr-bubble"></span></p>
+                                                    <ul class="social-links col-lg-12 col-md-12 col-6">
+                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9">
+                                                <h3 class="mt-20 mb-20">About Delta Airlines</h3>
+                                                <p class="excert">
+                                                    MCSE boot camps have its supporters and <span
+                                                        class="fa fa-calendar"></span> its detractors. Some people do
+                                                    not understand why you should have to spend money on boot camp when
+                                                    you can get the MCSE study materials yourself at a fraction.
+                                                </p>
+                                                <p>
+                                                    Boot camps have its supporters and its detractors. Some people do
+                                                    not understand why you should have to spend money on boot camp when
+                                                    you can get the MCSE study materials yourself at a fraction of the
+                                                    camp price. However, who has the willpower to actually sit through a
+                                                    self-imposed MCSE training. who has the willpower to actually sit
+                                                    through a self-imposed
+                                                </p>
+
+                                            </div>
+
+                                            <div class="destinations-area col-lg-12 ml-20">
+                                                <div class="single-destinations justify-content-lg-center  mt-0">
+                                                    <div class="border details row justify-content-lg-around">
+                                                        <div class="justify-content-between col-lg-10 no-gutters">
+
+                                                            <div class="row align-items-center justify-content-around">
+                                                                <div class="">
+                                                                    <img class="airlineLogo"
+                                                                         src="{% static 'img/linesLogo/FR.png' %}"
+                                                                         alt="logo">
+                                                                    <p class="hunt-h6">FR 8508 Economy</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="mr-2 depart"><i
+                                                                            class="fas fa-plane-departure fa-2x"></i></div>
+                                                                    <div class="text align-content-center">
+                                                                        <h6 class="hunt-city">Warszawa (WMI)</h6>
+                                                                        <p class="hunt-dates"><i class="far fa-clock"></i> 7:55,
+                                                                            13 lis 2020</p>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="mr-2 arrival"><i
+                                                                            class="fas fa-plane-arrival fa-2x"></i></div>
+                                                                    <div class="text">
+                                                                        <h6 class="hunt-city">Londyn (STN)</h6>
+                                                                        <p class="hunt-dates"><i class="far fa-clock"></i> 10:50,
+                                                                            13 LIS 2020</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row align-items-center justify-content-around">
+                                                                <div class="logo">
+                                                                    <img class="airlineLogo"
+                                                                         src="{% static 'img/linesLogo/FR.png' %}"
+                                                                         alt="logo">
+                                                                    <p class="hunt-h6">FR 8508 Economy</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-center ">
+                                                                    <div class="mr-2">
+                                                                        <i class="depart fas fa-plane-departure fa-2x"></i>
+                                                                    </div>
+                                                                    <div class="text">
+                                                                        <h6 class="hunt-city">Warszawa (WMI)</h6>
+                                                                        <p class="hunt-dates"><i class="far fa-clock"></i> 7:55,
+                                                                            13 lis 2020</p>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="mr-2"><i
+                                                                            class="fas fa-plane-arrival fa-2x arrival"></i></div>
+                                                                    <div class="text ml-0 align-items-center">
+                                                                        <h6 class="hunt-city">Londyn (STN)</h6>
+                                                                        <p class="hunt-dates"><i class="far fa-clock"></i> 10:50,
+                                                                            13 LIS 2020</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-lg-center ml-auto">
+                                                            <div><a href="#" class="genric-btn primary">490
+                                                            PLN</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="faqs">
+                                        <div id="accordion" class="custom-accordion">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <button class="collapsebtn" data-toggle="collapse"
+                                                            data-target="#collapseOne">
+                                                        Rules and Policies
+                                                    </button>
+                                                </div>
+                                                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="text-theme no-margin">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingTwo">
+                                                    <button class="collapsebtn collapsed" data-toggle="collapse"
+                                                            data-target="#collapseTwo">
+                                                        Flight Changes
+                                                    </button>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="text-theme no-margin">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <button class="collapsebtn collapsed" data-toggle="collapse"
+                                                            data-target="#collapseThree">
+                                                        Refunds
+                                                    </button>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="text-theme no-margin">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingFour">
+                                                    <button class="collapsebtn collapsed" data-toggle="collapse"
+                                                            data-target="#collapseFour">
+                                                        Airline Penalties
+                                                    </button>
+                                                </div>
+                                                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="text-theme no-margin">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingFive">
+                                                    <button class="collapsebtn collapsed" data-toggle="collapse"
+                                                            data-target="#collapseFive">
+                                                        Flight Cancellation
+                                                    </button>
+                                                </div>
+                                                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="text-theme no-margin">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingSix">
+                                                    <button class="collapsebtn collapsed" data-toggle="collapse"
+                                                            data-target="#collapseSix">
+                                                        Airline Terms of Use
+                                                    </button>
+                                                </div>
+                                                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p class="text-theme no-margin">
+                                                            Lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting industry. Lorem Ipsum has been the industry's
+                                                            standard dummy text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-right">
+                                    <hr class="col-lg-10">
+                                </div>
+                                <div class="widget-wrap hunt-tags">
+                                    <div class="single-sidebar-widget tag-cloud-widget mt-3 pb-2">
+{#                                        <h4 class="tagcloud-title">Tag Clouds</h4>#}
+                                        <ul class="tags">
+                                            <li><a href="#">low-cost</a></li>
+                                            <li><a href="#">Ryanair</a></li>
+                                            <li><a href="#">linie lotnicze</a></li>
+                                            <li><a href="#">Ryanair</a></li>
+                                            <li><a href="#">Warszawa Modlin</a></li>
+                                            <li><a href="#">Londyn Stanstead</a></li>
+                                            <li><a href="#">Wielka Brytania</a></li>
+                                            <li><a href="#">Loty z Warszawy</a></li>
+                                            <li><a href="#">Loty do Londynu</a></li>
+
+                                        </ul>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 sidebar-widgets">
+                    <div class="widget-wrap">
+                        {#								<div class="single-sidebar-widget search-widget">#}
+                        {#									<form class="search-form" action="#">#}
+                        {#			                            <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >#}
+                        {#			                            <button type="submit"><i class="fa fa-search"></i></button>#}
+                        {#			                        </form>#}
+                        {#								</div>#}
+                        <div class="single-sidebar-widget ads-widget">
+                            <a href="#"><img class="img-fluid" src="{% static 'img/banners/300x600.gif' %}" alt=""></a>
+                        </div>
+                        <div class="single-sidebar-widget popular-post-widget">
+                            <h4 class="popular-title">Popular Posts</h4>
+                            <div class="popular-post-list">
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src="{% static 'img/blog/pp1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src="{% static 'img/blog/pp2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src="{% static 'img/blog/pp3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src="{% static 'img/blog/pp4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>Asteroids telescope</h6></a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End destinations Area -->
+{% endblock %}
+
+{% block jquery %}
+
+
+{% endblock %}
+

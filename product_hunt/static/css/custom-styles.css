@@ -1,0 +1,76 @@
+/*
+        styles for detailed hunt's view
+ */
+.hunt-tabs:link {
+
+}
+.hunt-tabs {
+    opacity: 0.50 !important;
+    font-variant-caps: petite-caps;
+    font-weight: 700;
+    font-size: large;
+    color: #f8b600 !important;
+    background-color: #f8b6007a !important;
+    background: repeating-radial-gradient(#fff, transparent 100px);
+    border-color: #dee2e6 #dee2e6 #848484;
+    margin-top: 10px;
+    height: 80%;
+}
+.hunt-tabs.active {
+    opacity: 0.85 !important;
+    font-variant-caps: petite-caps;
+    font-weight: 700;
+    font-size: large;
+    color: #fff !important;
+    background-color: #f8b600 !important;
+    background: content-box;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 15px;
+    height: 100%;
+    border-color: #dee2e6 #dee2e6 #848484;
+}
+
+.hunt-tags {
+    background-color: #f8f9fa;
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+/* snippet in overview tabs */
+.airlineLogo {
+
+    color: #f8b600;
+
+}
+
+.depart, .arrival {
+    color: #f8b600;
+}
+
+.hunt-city {
+    opacity: 0.95;
+    color: #777777;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.hunt-h6 {
+    opacity: 0.75;
+    font-size: x-small;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.hunt-dates {
+    opacity: 0.75;
+    font-size: small;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-right: 0;
+
+}
+

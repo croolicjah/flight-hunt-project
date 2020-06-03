@@ -2565,6 +2565,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-right .nav-item a {
   color: #fff;
+  /*border-bottom-color: #dee2e6;*/
 }
 
 .banner-right .nav-item:hover a {

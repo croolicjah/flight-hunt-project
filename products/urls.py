@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 from django.urls import path, include
 from products.views import Home
+from .views import CreateFlight, DetailedFlight, ScrapyFlight
+
 urlpatterns = [
-    path('create', Create.as_view(), name='create'),
+    path('create/', login_required(CreateFlight.as_view()), name='create'),
+    path('<int:flight_id>/', DetailedFlight.as_view(), name='detail'),
+    path('scrap_flights/', ScrapyFlight.as_view(), name='scrapy_flights'),
+
 ]

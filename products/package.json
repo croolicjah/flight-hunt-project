@@ -1,0 +1,57 @@
+{
+  'continue': {
+    'clcontinue': '90846|polski_język_migowy_(indeks)',
+    'continue': '||'
+  },
+  'query': {
+    'pages': {
+      '90846': {
+        'pageid': 90846,
+        'ns': 0,
+        'title': 'Wielka Brytania',
+        'categories': [
+          {
+            'ns': 14,
+            'title': 'Kategoria:Język polski - frazy rzeczownikowe'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Język polski - nazwy własne'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Język polski - rzeczowniki'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Język polski - rzeczowniki rodzaju żeńskiego'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Wymowa polska - końcówki -ni...'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Wymowa polska - nazalizacja'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Wymowa polska - wymowa i jako /j/'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:Wymowa polska - zmiękczenie'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:polski (indeks)'
+          },
+          {
+            'ns': 14,
+            'title': 'Kategoria:polski (indeks a tergo)'
+          }
+        ]
+      }
+    }
+  }
+}
