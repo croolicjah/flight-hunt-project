@@ -17,7 +17,7 @@ idna==2.9
 incremental==17.5.0
 lxml==4.5.0
 mwclient==0.10.0
-numpy==1.18.4
+numpy==1.22.0
 oauthlib==3.1.0
 parsel==1.6.0
 Pillow==7.1.2
